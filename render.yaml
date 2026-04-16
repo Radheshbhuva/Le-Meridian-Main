@@ -1,0 +1,27 @@
+services:
+  # ── Backend (Express API) ──────────────────────────────────────────
+  - type: web
+    name: lemeridian-backend
+    runtime: node
+    rootDir: backend
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: PORT
+        value: 5000
+      - key: MONGO_URI
+        sync: false   # Set this manually in the Render dashboard
+      - key: JWT_SECRET
+        sync: false   # Set this manually in the Render dashboard
+    healthCheckPath: /
+
+  # ── Frontend (React / Create React App) ──────────────────────────
+  - type: web
+    name: lemeridian-frontend
+    runtime: node
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npx serve -s build -l 3000
+    envVars:
+      - key: REACT_APP_API_URL
+        sync: false   # Set to your backend Render URL e.g. https://lemeridian-backend.onrender.com
