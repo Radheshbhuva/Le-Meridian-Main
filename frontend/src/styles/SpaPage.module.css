@@ -1,0 +1,153 @@
+.spaPage {
+  background: var(--light);
+}
+
+/* Container */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HERO */
+
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+/* SECTION TITLE */
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* SERVICES */
+
+.servicesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 30px;
+}
+
+.serviceCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.serviceCard:hover {
+  transform: translateY(-5px);
+}
+
+.serviceCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.serviceContent {
+  padding: 20px;
+}
+
+.meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.meta i {
+  margin-right: 5px;
+  color: var(--accent);
+}
+
+/* BUTTON */
+
+.bookBtn {
+  margin-top: 10px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+/* FACILITIES */
+
+.facilitiesSection {
+  margin-top: 80px;
+}
+
+.facilitiesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(180px,1fr));
+  gap: 30px;
+  text-align: center;
+}
+
+.facilityCard {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+}
+
+.facilityCard i {
+  font-size: 30px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* PACKAGES */
+
+.packagesSection {
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+
+.packagesGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 30px;
+}
+
+.packageCard {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.packagePrice {
+  font-size: 1.5rem;
+  color: var(--accent);
+  margin: 10px 0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+  .heroContent h1{
+    font-size:2.2rem;
+  }
+}

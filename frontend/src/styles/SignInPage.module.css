@@ -1,0 +1,93 @@
+.signInPage {
+  height: 100vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),
+    url("https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* LOGIN CARD */
+
+.loginCard {
+  background: white;
+  padding: 40px;
+  width: 350px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.loginCard h1 {
+  margin-bottom: 10px;
+  color: var(--primary);
+}
+
+.loginCard p {
+  font-size: 14px;
+  margin-bottom: 20px;
+  color: var(--gray);
+}
+
+/* FORM */
+
+.loginCard label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.loginCard input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 4px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* LINKS */
+
+.forgot {
+  display: block;
+  text-align: right;
+  margin-top: 6px;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+/* BUTTONS */
+
+.signInBtn {
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  background: var(--accent);
+  color: white;
+  cursor: pointer;
+}
+
+.createBtn {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid var(--accent);
+  background: transparent;
+  color: var(--accent);
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:500px){
+
+.loginCard{
+width:90%;
+padding:30px;
+}
+
+}

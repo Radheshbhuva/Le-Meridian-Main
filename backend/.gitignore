@@ -1,0 +1,32 @@
+# ========================
+# Backend .gitignore
+# ========================
+
+# Dependencies
+node_modules/
+
+# Environment variables — NEVER commit secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Debug / test scripts
+test-db.js
+test-booking.js
+test-add-room.js
+check-images.js
+check-raw.js
+update-radhesh.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build output (if applicable)
+dist/
+build/

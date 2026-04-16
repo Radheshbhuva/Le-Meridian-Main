@@ -1,0 +1,161 @@
+.diningPage {
+  background: var(--light);
+}
+
+/* Container */
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+/* HERO */
+
+.hero {
+  height: 60vh;
+  background:
+    linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url("https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.heroContent h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.heroContent p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* SECTION TITLE */
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: var(--primary);
+}
+
+/* RESTAURANTS */
+
+.restaurantGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 30px;
+}
+
+.restaurantCard {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.restaurantCard:hover {
+  transform: translateY(-5px);
+}
+
+.restaurantCard img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.restaurantContent {
+  padding: 20px;
+}
+
+.cuisine {
+  color: var(--accent);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+
+.hours {
+  font-size: 14px;
+  color: var(--gray);
+  margin-bottom: 10px;
+}
+
+.hours i {
+  margin-right: 5px;
+}
+
+.menuBtn {
+  margin-top: 10px;
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+/* CHEF SECTION */
+
+.chefSection {
+  margin-top: 80px;
+}
+
+.chefGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.chefGrid img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.chefQuote {
+  font-style: italic;
+  margin: 15px 0;
+  color: var(--accent);
+}
+
+/* EXPERIENCE */
+
+.experienceSection {
+  margin-top: 80px;
+  padding-bottom: 80px;
+}
+
+.experienceGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+  gap: 30px;
+}
+
+.expCard {
+  background: white;
+  padding: 30px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.expCard i {
+  font-size: 28px;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+  .chefGrid{
+    grid-template-columns:1fr;
+  }
+
+}
