@@ -24,8 +24,21 @@ connectDB();
 app.use(express.json({ limit: '10mb' }));
 app.use(express.urlencoded({ limit: '10mb', extended: true }));
 app.use(cors({
-  origin: ["http://localhost:3000", "http://localhost:3001"]
-})); 
+  origin: function (origin, callback) {
+    const allowed = [
+      'http://localhost:3000',
+      'http://localhost:3001',
+      'https://le-meridian-main.vercel.app',
+    ];
+    // Allow all Vercel preview deployments (*.vercel.app) and null (curl/Postman)
+    if (!origin || allowed.includes(origin) || /\.vercel\.app$/.test(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
+  credentials: true
+}));
 
 
 // Routes
